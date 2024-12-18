@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container"> <!-- Contenitore principale per il contenuto della pagina -->
+    <h1>Benvenuto al Test!</h1> <!-- Intestazione principale che dà il benvenuto all'utente -->
+    <p>Clicca il pulsante per iniziare il test.</p> <!-- Messaggio che istruisce l'utente a cliccare sul pulsante per iniziare -->
+    <button id="startTest" onclick="startTest()">Inizia il Test</button> <!-- Pulsante che l'utente può cliccare per avviare il test, attiva la funzione "startTest" quando cliccato -->
+  </div>
+  
+  <script>
+    // Funzione JavaScript che viene richiamata quando l'utente clicca sul pulsante
+    function startTest() {
+      window.location.href = "open-questions.html"; // Reindirizza l'utente alla pagina "open-questions.html"
+    }
+  </script>
+</body>
+</html>
+

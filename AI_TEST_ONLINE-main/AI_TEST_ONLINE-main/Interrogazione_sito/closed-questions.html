@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it"> 
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Domande Chiuse</title> <!-- Titolo della pagina che appare nella barra del browser -->
+  <link rel="stylesheet" href="style.css"> <!-- Collega il file CSS esterno per lo stile della pagina -->
+</head>
+<body>
+  <div class="container"> <!-- Contenitore principale per il contenuto della pagina -->
+    <h1>Domande Chiuse</h1> <!-- Intestazione principale della pagina -->
+    <form id="closedQuestionsForm"> <!-- Inizia un modulo con id "closedQuestionsForm" per raccogliere le risposte -->
+      <!-- Prima domanda -->
+      <div>
+        <label>1. Qual è la porta del SSH?</label> <!-- Etichetta per la domanda -->
+        <select name="question4" required> <!-- Menu a discesa per la selezione della risposta, l'attributo "required" rende obbligatorio rispondere -->
+          <option value="Rosso">23</option> <!-- Opzione con valore 23 per la porta SSH -->
+          <option value="Blu">443</option> <!-- Opzione per una porta che non è quella del SSH -->
+          <option value="Verde">80</option> <!-- Opzione per una porta che non è quella del SSH -->
+          <option value="Giallo">22</option> <!-- Opzione corretta, la porta SSH è 22 -->
+        </select>
+      </div>
+      <!-- Seconda domanda -->
+      <div>
+        <label>2. Quanti bit è lungo un IPv4?</label> <!-- Etichetta per la domanda -->
+        <input type="radio" name="question5" value="Sì" required> 32 <!-- Radio button per la risposta corretta -->
+        <input type="radio" name="question5" value="No" required> 64 <!-- Radio button per una risposta errata -->
+      </div>
+      <button type="button" onclick="submitAnswers()">Invia</button> <!-- Pulsante per inviare il modulo, richiamando la funzione JavaScript "submitAnswers()" -->
+    </form>
+  </div>
+  <script src="script.js"></script> <!-- Collega il file JavaScript esterno per gestire le azioni sul modulo -->
+</body>
+</html>

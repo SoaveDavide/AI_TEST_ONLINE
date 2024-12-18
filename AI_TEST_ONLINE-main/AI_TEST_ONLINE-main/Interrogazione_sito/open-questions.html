@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domande Aperte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container"> <!-- Contenitore principale per il contenuto della pagina -->
+    <h1>Domande Aperte</h1> <!-- Titolo principale della pagina, indica che si tratta di domande aperte -->
+    
+    <!-- Form per raccogliere le risposte dell'utente -->
+    <form id="openQuestionsForm"> <!-- Il modulo con l'ID "openQuestionsForm" raccoglie le risposte delle domande -->
+      
+      <!-- Prima domanda: "Che cos'è una socket?" -->
+      <div>
+        <label>1. Che cos'è una socket?</label> <!-- Etichetta per la domanda -->
+        <textarea name="domanda1" required></textarea> <!-- Area di testo per la risposta, obbligatoria grazie all'attributo "required" -->
+      </div>
+      
+      <!-- Seconda domanda: "Come funziona una socket?" -->
+      <div>
+        <label>2. Come funziona una socket?</label> <!-- Etichetta per la domanda -->
+        <textarea name="domanda2" required></textarea> <!-- Area di testo per la risposta, obbligatoria -->
+      </div>
+      
+      <!-- Terza domanda: "Parla del livello di trasporto?" -->
+      <div>
+        <label>3. Parla del livello di trasporto?</label> <!-- Etichetta per la domanda -->
+        <textarea name="domanda3" required></textarea> <!-- Area di testo per la risposta, obbligatoria -->
+      </div>
+      
+      <!-- Pulsante per inviare o passare alla prossima parte del test -->
+      <button type="button" onclick="saveOpenAnswers()">Prossima</button> <!-- Il pulsante esegue la funzione JavaScript "saveOpenAnswers()" -->
+    </form>
+  </div>
+
+  <!-- Collegamento al file JavaScript esterno -->
+  <script src="script.js"></script>
+</body>
+</html>
+

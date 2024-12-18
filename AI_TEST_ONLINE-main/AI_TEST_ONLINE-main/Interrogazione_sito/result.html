@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risultati del Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Test Completato!</h1>
+    <p id="timeDisplay">Tempo impiegato: </p>
+    <p>I tuoi risultati sono stati salvati con successo!</p>
+    <p>Grazie per aver completato il test.</p>
+  </div>
+
+  <script>
+    // Recupera il tempo residuo dal sessionStorage
+    const totalTime = 300; // Tempo totale (5 minuti)
+    const timeLeft = sessionStorage.getItem("timeLeft") ? parseInt(sessionStorage.getItem("timeLeft")) : 0;
+    const timeTaken = totalTime - timeLeft; // Tempo impiegato in secondi
+    const minutes = Math.floor(timeTaken / 60);
+    const seconds = timeTaken % 60;
+
+    // Mostra il tempo impiegato
+    const timeDisplay = document.getElementById("timeDisplay");
+    timeDisplay.textContent = `Tempo impiegato: ${minutes} minuti e ${seconds < 10 ? '0' : ''}${seconds} secondi`;
+
+    // Pulisce il sessionStorage
+    sessionStorage.removeItem("timeLeft");
+  </script>
+</body>
+</html>

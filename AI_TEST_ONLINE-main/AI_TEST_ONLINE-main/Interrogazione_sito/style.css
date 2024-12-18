@@ -1,0 +1,137 @@
+/* Resetta alcune proprietà di base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Imposta lo stile di base del body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F4F4F4; /* Colore di sfondo neutro */
+  color: #333; /* Testo scuro */
+  line-height: 1.6;
+  padding: 0 20px; /* Aggiungi un po' di spazio ai lati */
+}
+
+/* Contenitore principale */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #FFFFFF; /* Sfondo bianco per il contenitore */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Titolo */
+h1 {
+  font-size: 2.5rem;
+  color: #D32F2F; /* Rosso primario */
+  margin-bottom: 20px;
+}
+
+/* Stile del pulsante */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #D32F2F; /* Rosso primario */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover sul pulsante */
+button:hover {
+  background-color: #B71C1C; /* Rosso scuro */
+  transform: translateY(-2px);
+}
+
+/* Effetto di focus sui form */
+textarea, select, input[type="radio"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus per i campi */
+textarea:focus, select:focus, input[type="radio"]:focus {
+  border-color: #D32F2F; /* Rosso primario */
+  background-color: #fff;
+}
+
+/* Aggiungi margine per le domande del form */
+form div {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Etichette delle domande */
+label {
+  display: block;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Stile per i radio button */
+input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Stile per il testo in textarea */
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Spaziatura interna dei form */
+form {
+  padding: 20px;
+}
+/* Stile per il timer */
+#timer {
+  font-size: 2rem; /* Dimensione grande per il timer */
+  color: #D32F2F; /* Colore rosso primario per il timer */
+  background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente per far risaltare il testo */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Assicura che il timer sia visibile sopra altri contenuti */
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Cambia colore quando il timer è quasi scaduto (meno di 30 secondi) */
+#timer.warning {
+  background-color: #FF9800; /* Colore arancione per avvisare che il tempo sta per scadere */
+  color: #fff;
+}
+
+/* Cambia colore quando il timer è scaduto */
+#timer.expired {
+  background-color: #D32F2F; /* Colore rosso scuro per indicare che il tempo è scaduto */
+  color: #fff;
+  transform: scale(1.1); /* Aumenta leggermente la dimensione per enfatizzare */
+}
+
+/* Transizione per il timer */
+#timer {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
